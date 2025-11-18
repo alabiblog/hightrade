@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAjoB3WT1r4Y9fPf9D005quetbFyexnyY4",
+  apiKey:  process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: "hightrade-6138b.firebaseapp.com",
   projectId: "hightrade-6138b",
   storageBucket: "hightrade-6138b.firebasestorage.app",
   messagingSenderId: "562659604726",
-  appId: "1:562659604726:web:b7f25d1bd00bcb7599d4d7"
+  appId: "1:562659604726:web:6b7032e67f05c87699d4d7"
 };
 
 // Initialize Firebase

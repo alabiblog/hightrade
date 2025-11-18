@@ -1,5 +1,8 @@
 "use client"
 
+import Home from "@/app/page";
+import Head from "next/head";
+import Link from "next/link";
 import React from "react";
 
 export default function TraderListPage() {
@@ -12,7 +15,7 @@ export default function TraderListPage() {
       specialty: "Crypto Scalping & Futures",
       win: 87,
       lose: 13,
-      telegram: "@TraderOneVIP",
+      telegram: "@SoniaDoe",
       languages: ["English", "Spanish", "French"],
       img: "/woman2.png"
     },
@@ -84,11 +87,22 @@ export default function TraderListPage() {
   };
 
   return (
+     <>
+        <Head>
+      <title>connect with proffesional crypto traders - HighTrade</title>
+      <meta name="description" content="connect with proffesional crypto traders, with 100% profit guarantee,chat with proffesional crypto traders, telegram proffesional crypto traders." />
+      <link rel="canonical" href="https://yourdomain.com/investment/bitcoin" />
+    </Head>
     <div className="mt-380  bg-[url(/trade1.png)] h-[40vh]  bg-contain       min-h-screen bg-gradient-to-br from-indigo-700 via-purple-600 to-pink-600 p-10 flex items-center justify-center lg:mt-80">
       <div className="max-w-7xl w-full">
-        <h1 className="text-center text-4xl font-extrabold text-white mb-10 drop-shadow-xl">
+        <h1 className="text-center text-4xl font-extrabold text-black/90 mb-10 drop-shadow-xl">
           Connect With a Professional Trader
         </h1>
+         <div className="flex justify-end mb-6">
+                    <Link href={"/"}><button className="bg-blue-400 text-white py-2 px-4 sm:px-6 rounded-lg font-semibold hover:bg-red-700 transition">
+                      Home
+                    </button></Link>
+                  </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {traders.map((t) => (
@@ -102,19 +116,19 @@ export default function TraderListPage() {
                 className="w-full h-48 object-cover rounded-xl mb-4 shadow-lg"
               />
 
-              <h2 className="text-2xl font-bold mb-1">{t.name}</h2>
-              <p className="text-sm opacity-80 mb-1">Age: {t.age}</p>
-              <p className="text-sm opacity-80 mb-1">Years Trading: {t.years} years</p>
-              <p className="text-sm opacity-80 mb-1">Specialty: {t.specialty}</p>
+              <h2 className="text-2xl font-bold mb-1  text-black/90">{t.name}</h2>
+              <p className="text-sm opacity-80 mb-1  text-black/90">Age: {t.age}</p>
+              <p className="text-sm opacity-80 mb-1  text-black/90">Years Trading: {t.years} years</p>
+              <p className="text-sm opacity-80 mb-1  text-black/90">Specialty: {t.specialty}</p>
 
-              <p className="text-sm opacity-80 mb-1">Languages: {t.languages.join(", ")}</p>
+              <p className="text-sm opacity-80 mb-1  text-black/90">Languages: {t.languages.join(", ")}</p>
 
               <div className="flex justify-between mt-3 mb-4">
                 <p className="text-green-300 font-semibold">Win rate: {t.win}%</p>
                 <p className="text-red-300 font-semibold">Lose rate: {t.lose}%</p>
               </div>
 
-              <div className="bg-white/10 p-3 rounded-xl mb-4 text-center border border-white/20">
+              <div className="bg-white/10 p-3 rounded-xl mb-4 text-center border border-white/20  text-black/90">
                 <p className="text-sm">Telegram: <span className="font-bold">{t.telegram}</span></p>
               </div>
 
@@ -139,5 +153,6 @@ export default function TraderListPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

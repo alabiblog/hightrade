@@ -1,6 +1,7 @@
 "use client";
 
 import { signOut, useSession } from "next-auth/react";
+import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 
@@ -9,6 +10,26 @@ export default function DashboardPage() {
   const { data: session } = useSession();
 
   return (
+     <>
+      <Head>
+        <title>Secure Crypto Wallet | Manage Your Investments on HighTrade</title>
+        <meta
+          name="description"
+          content="Easily manage your crypto investments with our secure wallet. Track balances, deposit,logout, and withdraw seamlessly on HighTrade,wallet alance,transaction,investment plan."
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FinancialAccount",
+              "name": "HighTrade Wallet",
+              "description": "Secure crypto wallet to manage your investments",
+              "url": "https://yourdomain.com/wallet"
+            }),
+          }}
+        />
+      </Head>
     <>
       <div className="min-h-screen bg-gray-100 flex flex-col md:flex-row">
         {/* Sidebar */}
@@ -99,6 +120,7 @@ export default function DashboardPage() {
           </div>
         </main>
       </div>
+    </>
     </>
   );
 }

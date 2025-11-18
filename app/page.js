@@ -1,10 +1,10 @@
 "use client"
 
 import Image from "next/image";
-// ...existing code...
 import Link from "next/link";
 import { useRef } from "react";
 import { useSession, signIn } from "next-auth/react";
+import Head from "next/head";
 
 
 export default function Home() {
@@ -79,6 +79,40 @@ export default function Home() {
     };
 
     return (
+         <>
+            <Head>
+                <title>HighTrade - Trade Smarter & Profit Faster</title>
+                <meta name="description" content="HighTrade pairs expert agents with powerful signals to grow your capital. Fast withdrawals in 48 hours. Join 100,000+ traders now!" />
+                <meta name="keywords" content="crypto trading, crypto signals, fast withdrawals, investment platform, Bitcoin trading,proffesional crypto traders, investors testimony,get started,dashboard,connect with crypto traders" />
+                <meta name="robots" content="index, follow,professional crypto traders" />
+                <link rel="canonical" href="https://yourdomain.com/" />
+
+                {/* Open Graph */}
+                <meta property="og:title" content="HighTrade - Trade Smarter & Profit Faster" />
+                <meta property="og:description" content="Expert crypto trading agents and signals. Fast withdrawals within 48 hours." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://yourdomain.com/" />
+                <meta property="og:image" content="https://yourdomain.com/trade6.png" />
+
+                {/* Structured Data */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "Organization,platform",
+                            "name": "HighTrade",
+                            "url": "https://yourdomain.com",
+                            "logo": "https://yourdomain.com/logo.png",
+                            "sameAs": [
+                                "https://telegram.com/yourhandle",
+                                "https://www.linkedin.com/company/yourcompany/"
+                            ]
+                        })
+                    }}
+                />
+            </Head>
+
         <main className="      min-h-screen bg-gray-50 text-gray-800">
             {/* Hero */}
             <section className="relative bg-gradient-to-r from-slate-900 via-indigo-900 to-purple-700 text-white overflow-hidden">
@@ -138,7 +172,7 @@ export default function Home() {
             </section>
 
             {/* Company Description */}
-            <section className="max-w-7xl mx-auto px-6 py-12">
+            <section className="bg-gradient-to-r from-slate-900 via-indigo-900 to-purple-700 max-w-7xl mx-auto px-6 py-12">
                 <div className="bg-white rounded-2xl shadow p-8 grid md:grid-cols-3 gap-6 items-center">
                     <div className="md:col-span-2 space-y-4">
                         <h2 className="text-2xl font-bold">How we help you trade — and get your profit in 48hrs</h2>
@@ -182,7 +216,7 @@ export default function Home() {
            
 
             {/* Testimonials Swiper */}
-            <section className="max-w-7xl mx-auto px-6 py-8">
+            <section className="bg-gradient-to-r from-slate-900 via-indigo-900 to-purple-700 max-w-7xl mx-auto px-6 py-8">
                 <div className="flex items-center justify-between mb-4">
                     <h3 className="text-xl font-semibold">Investors testimonials</h3>
                     <div className="flex gap-2">
@@ -226,7 +260,7 @@ export default function Home() {
             </section>
 
             {/* Founder / CTA */}
-            <section className="max-w-7xl mx-auto px-6 py-12">
+            <section className="bg-gradient-to-r from-slate-900 via-indigo-900 to-purple-700 max-w-7xl mx-auto px-6 py-12">
                 <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl p-8 flex flex-col md:flex-row items-center gap-6">
                     <img
                         src={"/woman1.jpeg"}
@@ -244,7 +278,8 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-        </main>
+        </main> 
+         </>
     );
 }
 // ...existing code...

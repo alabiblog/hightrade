@@ -1,5 +1,8 @@
 "use client";
 
+import Head from "next/head";
+
+
 export default function WalletBalance() {
   const wallet = {
     totalBalance: "$00,000",
@@ -13,6 +16,26 @@ export default function WalletBalance() {
   };
 
   return (
+     <>
+      <Head>
+        <title>Secure Crypto Wallet | Manage Your Investments on HighTrade</title>
+        <meta
+          name="description"
+          content="Easily manage your crypto investments with our secure wallet. Track balances, deposit, and withdraw seamlessly on HighTrade."
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FinancialAccount",
+              "name": "HighTrade Wallet",
+              "description": "Secure crypto wallet to manage your investments",
+              "url": "https://yourdomain.com/wallet"
+            }),
+          }}
+        />
+      </Head>
     <div className="p-6 bg-gray-100 min-h-screen">
       <h2 className="text-3xl font-bold mb-6 text-gray-800 text-center">
         Wallet Balance
@@ -65,5 +88,6 @@ export default function WalletBalance() {
         </div>
       </div>
     </div>
+    </>
   );
 }

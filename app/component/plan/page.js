@@ -1,5 +1,6 @@
 "use client";
 
+import Head from "next/head";
 import Link from "next/link";
 
 
@@ -44,6 +45,13 @@ export default function InvestmentPlans() {
   ];
 
   return (
+    <>
+    <Head>
+  <title>Bitcoin Investment Plan - HighTrade</title>
+  <meta name="description" content="Join our Bitcoin investment plan and grow your capital with expert crypto trading agents. Fast withdrawals in 48 hours." />
+  <link rel="canonical" href="https://yourdomain.com/investment/bitcoin" />
+</Head>
+
     <div className="bg-[url(/trade1.png)] h-[40vh] bg-contain    p-6 bg-gray-100 min-h-screen">
       <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">
         Investment Plans
@@ -74,5 +82,6 @@ export default function InvestmentPlans() {
         ))}
       </div>
     </div>
+    </>
   );
 }
