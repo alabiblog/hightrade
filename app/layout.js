@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "HighTrade",
+  title: "HighInvestment",
   description: "Platform that helps you invest and generate profit",
   icons: {
     icon: "/favicon.ico",

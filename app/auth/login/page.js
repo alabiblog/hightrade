@@ -5,6 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import Link from "next/link";
 
 
 export default function Login() {
@@ -49,9 +50,9 @@ const router = useRouter();
 
         <p className="text-gray-400 text-xs mt-8 text-center">
           By signing up, you agree to our{" "}
-          <span className="underline cursor-pointer hover:text-blue-600">Terms</span>{" "}
+         <Link href={"/component/terms"}><span className="underline cursor-pointer hover:text-blue-600">Terms</span>{" "}</Link> 
           and{" "}
-          <span className="underline cursor-pointer hover:text-blue-600">Privacy Policy</span>.
+          <Link href={"/component/privacy"}><span className="underline cursor-pointer hover:text-blue-600">Privacy Policy</span>.</Link>
         </p>
       </div>
     </main>

@@ -6,7 +6,7 @@ import { redirect } from "next/navigation"
 export default async function Authorization(){
     const session = await auth()
     if(!session?.user){
-        redirect("/auth/login")
+        redirect("/component/notify")
     }
     return(
         <main>

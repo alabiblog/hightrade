@@ -3,21 +3,21 @@
 export default function Transactions() {
   const transactions = [
     {
-      // id: "TXN001",
+       id: "TXN001",
       //  type: "Deposit",
       //  amount: "$500",
       //  date: "2025-11-15",
       //  status: "Completed",
     },
     {
-      // id: "TXN002",
+       id: "TXN002",
       //  type: "Withdrawal",
       //  amount: "$200",
       //  date: "2025-11-16",
       //  status: "Pending",
     },
     {
-      // id: "TXN003",
+       id: "TXN003",
       //  type: "Deposit",
       //  amount: "$1000",
       //  date: "2025-11-17",

@@ -128,11 +128,11 @@ export default function Home() {
                         <div className="flex gap-4">
                             
                                  
-                           <Link href={"/component/notify"}> <button  className="bg-yellow-400 text-slate-900 font-semibold px-5 py-3 rounded shadow hover:brightness-95">
+                           <Link href={"/component/notify"}> <button  className="bg-white text-slate-900 font-semibold px-5 py-3 rounded shadow hover:brightness-95">
                                 Get Started
                             </button></Link>
                             
-                            <Link href={"/auth/login/dashboard"}><button className="border border-white/30 px-5 py-3 rounded hover:bg-white/5">
+                            <Link href={"/auth/login/dashboard"}><button className="bg-black border border-white/30 px-5 py-3 rounded hover:bg-white/5">
                                 Dashboard
                             </button></Link>
                         </div>
@@ -218,7 +218,7 @@ export default function Home() {
             {/* Testimonials Swiper */}
             <section className="bg-gradient-to-r from-slate-900 via-indigo-900 to-purple-700 max-w-7xl mx-auto px-6 py-8">
                 <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-semibold">Investors testimonials</h3>
+                    <h3 className="text-xl font-semibold text-white">Investors testimonials</h3>
                     <div className="flex gap-2">
                         <button
                             onClick={() => scroll(-1)}
@@ -274,10 +274,34 @@ export default function Home() {
                         </div>
                     </div>
                     <div>
-                        <Link href={"/component/connect"}><button className="bg-white text-indigo-700 px-5 py-3 rounded font-semibold shadow">Start Trading</button></Link>
+                        <Link href={"/component/connect"}><button className="bg-white text-indigo-700 px-5 py-3 rounded font-semibold shadow">Start Investment</button></Link>
                     </div>
                 </div>
             </section>
+           <div className="bg-gradient-to-r from-slate-900 via-indigo-900 to-purple-700 w-full flex justify-center px-5">
+<div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white w-full max-w-sm bg-white rounded-2xl shadow-xl p-6  flex flex-col items-center text-center">
+<h2 className="text-lg font-bold text-white mb-2">Important Info</h2>
+<p className="text-white text-sm mb-4">
+View our Terms & Conditions and Privacy Policy.
+</p>
+
+
+<div className="flex gap-3 mt-2 w-full">
+<Link href="/component/terms" className="flex-1">
+<button className="w-full bg-black text-white py-2 rounded-xl hover:bg-blue-700 active:bg-blue-800 transition">
+Terms
+</button>
+</Link>
+
+
+<Link href="/component/privacy" className="flex-1">
+<button className="w-full bg-gray-200 text-gray-800 py-2 rounded-xl hover:bg-gray-300 active:bg-gray-400 transition">
+Privacy
+</button>
+</Link>
+</div>
+</div>
+</div>
         </main> 
          </>
     );
