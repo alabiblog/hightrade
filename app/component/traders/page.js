@@ -27,7 +27,7 @@ export default function TraderListPage() {
       specialty: "Forex Day Trading",
       win: 82,
       lose: 18,
-      telegram: "@ForexProTwo",
+      telegram: "@MarkPhilip11",
       languages: ["English", "German", "Spanish"],
       img: "/nnaa.jpg"
     },
@@ -39,7 +39,7 @@ export default function TraderListPage() {
       specialty: "Crypto Swing Trading",
       win: 90,
       lose: 10,
-      telegram: "@CryptoBossThree",
+      telegram: "@MaryJane21111",
       languages: ["English", "Spanish", "French"],
       img: "/woman3.jpeg"
     },
