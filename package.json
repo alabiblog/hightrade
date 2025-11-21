@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",
-    "start": "next start",
-    "postinstall": "npm install --legacy-peer-deps"
+    "start": "next start"
+    
   },
   "dependencies": {
     "@auth/firebase-adapter": "^2.11.1",
